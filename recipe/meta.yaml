@@ -29,6 +29,7 @@ requirements:
     - wandb
     - pytorch-lightning >=2.0.0
     - bayesian-optimization
+    - coolname
     - python >=3.9
 
 test:
