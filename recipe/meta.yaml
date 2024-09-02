@@ -1,5 +1,5 @@
 {% set name = "aixd" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aixd-{{ version }}.tar.gz
-  sha256: b37a1026e3696a9ca94175b361d87364410d66d02532183031f4f6c650f029ea
+  sha256: 62dfbb649984b93ef9e3de63169054068af120d264958578641b7ef81160ad26
 
 build:
   number: 0
