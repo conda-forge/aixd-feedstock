@@ -19,6 +19,7 @@ requirements:
   host:
     - pip
     - python >=3.9
+    - setuptools
   run:
     - pandas >=2.1.0
     - numpy >=1.22.4
