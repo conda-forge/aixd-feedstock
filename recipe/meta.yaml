@@ -7,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aixd-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aixd-{{ version }}.tar.gz
   sha256: 00cd142dfb5e1cd4c072f9a2db9f3037a2ccbcdda298b19d55145ee5a78e5621
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools
   run:
     - pandas >=2.1.0
@@ -31,7 +31,7 @@ requirements:
     - pytorch-lightning >=2.0.0
     - bayesian-optimization
     - coolname
-    - python >=3.9
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -40,6 +40,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://aixd.ethz.ch/
