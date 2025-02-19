@@ -25,14 +25,14 @@ requirements:
     - numpy >=1.22.4
     - scipy >=1.8.1
     - scikit-learn >=0.23.0
-    - plotly >=5.15
+    - plotly ~=6.0.0
     - pytorch >=2.0.0
     - wandb
     - pytorch-lightning >=2.0.0
-    - bayesian-optimization
+    - bayesian-optimization <2.0.0
     - coolname
     - python >={{ python_min }}
-
+    
 test:
   imports:
     - aixd
